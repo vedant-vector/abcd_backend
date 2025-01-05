@@ -11,7 +11,6 @@ export class MachineController {
     @Post('state-update')
     handleMachineStateUpdate(@Body() machineStateDto:MachineStateDto){
         console.log("Received Machine State from Webhook");
-        console.log("--> machineStateDto , ",machineStateDto);
         
         return this.machineService.handleMachineStateUpdate(machineStateDto.state);
 
